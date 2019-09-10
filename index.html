@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+
+	
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+  
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" media="all" href="css1/style.css">
+
+
+
+
+<style type="text/css">
+
+.flag {
+    width:300px;
+    height:200px;
+    margin:none;
+}
+.flag-element {
+    -webkit-animation:oscill 1s ease-in-out infinite alternate; 
+    -moz-animation:oscill 1s ease-in-out infinite alternate; 
+    -ms-animation:oscill 1s ease-in-out infinite alternate; 
+    animation:oscill 1s ease-in-out infinite alternate; 
+    background: url('flag.gif');
+    background-size: 300px 100%;
+    position:relative;
+    height:90px;
+    width:1px;
+    display:inline-block;
+    box-shadow:0 0px grey, 0 -1px gray;
+}
+@-webkit-keyframes oscill {
+    0% {
+        top: 5%;
+    }        
+    100% {
+        top: -5%;
+    }
+}
+@-moz-keyframes oscill {
+    0% {
+        top: 5%;
+    }        
+    100% {
+        top: -5%;
+    }
+}
+@-ms-keyframes oscill {
+    0% {
+        top: 5%;
+    }        
+    100% {
+        top: -5%;
+    }
+}
+@keyframes oscill {
+    0% {
+        top: 5%;
+    }        
+    100% {
+        top: -5%;
+    }
+}
+
+
+
+
+.box{
+	width: none;
+	height: none;
+	padding: 20px;
+	margin: 0px;
+	box-shadow:  0px 0px 10px 2px blue;
+	border: none;
+	background-image: url(https://media.giphy.com/media/1233N8Oj4cDhZK/giphy.gif);
+	background-size: cover;
+
+}
+
+a:link {
+  color: red; 
+  background-color: transparent; 
+  text-decoration: none;
+}
+
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+
+
+.btn-group button {
+  background-color: #5bc0de; /* Green background */
+  border: 0px solid blue; /* blue border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: ##5bc0de;
+}
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+
+.flip-box {
+  background-color: blue;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: green;
+  color: black;
+}
+
+.flip-box-back {
+  background-color: blue;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+@charset "UTF-8";
+/* Base Styles */
+#cssmenu > ul,
+#cssmenu > ul li,
+#cssmenu > ul ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#cssmenu > ul {
+  position: relative;
+  z-index: 597;
+}
+#cssmenu > ul li {
+  float: left;
+  min-height: 1px;
+  line-height: 1.3em;
+  vertical-align: middle;
+}
+#cssmenu > ul li.hover,
+#cssmenu > ul li:hover {
+  position: relative;
+  z-index: 599;
+  cursor: default;
+}
+#cssmenu > ul ul {
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 598;
+  width: 100%;
+}
+#cssmenu > ul ul li {
+  float: none;
+}
+#cssmenu > ul ul ul {
+  top: 1px;
+  left: 99%;
+}
+#cssmenu > ul li:hover > ul {
+  visibility: visible;
+}
+/* Align last drop down RTL */
+#cssmenu > ul > li.last ul ul {
+  left: auto !important;
+  right: 99%;
+}
+#cssmenu > ul > li.last ul {
+  left: auto;
+  right: 0;
+}
+#cssmenu > ul > li.last {
+  text-align: right;
+}
+/* Theme Styles */
+#cssmenu > ul {
+  border-top: 4px solid #3fa338;
+  font-family: Calibri, Tahoma, Arial, sans-serif;
+  font-size: 14px;
+  background: #1e1e1e;
+  background: -moz-linear-gradient(top, #1e1e1e 0%, #040404 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1e1e1e), color-stop(100%, #040404));
+  background: -webkit-linear-gradient(top, #1e1e1e 0%, #040404 100%);
+  background: linear-gradient(top, #1e1e1e 0%, #040404 100%);
+  width: auto;
+  zoom: 1;
+}
+#cssmenu > ul:before {
+  content: '';
+  display: block;
+}
+#cssmenu > ul:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+#cssmenu > ul li a {
+  display: inline-block;
+  padding: 10px 22px;
+}
+#cssmenu > ul > li.active,
+#cssmenu > ul > li.active:hover {
+  background-color: #3fa338;
+}
+#cssmenu > ul > li > a:link,
+#cssmenu > ul > li > a:active,
+#cssmenu > ul > li > a:visited {
+  color: #ffffff;
+}
+#cssmenu > ul > li > a:hover {
+  color: #ffffff;
+}
+#cssmenu > ul ul ul {
+  top: 0;
+}
+#cssmenu > ul li li {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ebebeb;
+  font-size: 12px;
+}
+#cssmenu > ul li.hover,
+#cssmenu > ul li:hover {
+  background-color: #F5F5F5;
+}
+#cssmenu > ul > li.hover,
+#cssmenu > ul > li:hover {
+  background-color: #3fa338;
+  -webkit-box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.15);
+}
+#cssmenu > ul a:link,
+#cssmenu > ul a:visited {
+  color: #9a9a9a;
+  text-decoration: none;
+}
+#cssmenu > ul a:hover {
+  color: #9a9a9a;
+}
+#cssmenu > ul a:active {
+  color: #9a9a9a;
+}
+#cssmenu > ul ul {
+  border: 1px solid #CCC \9;
+  -webkit-box-shadow: 0 0px 2px 1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0px 2px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0px 2px 1px rgba(0, 0, 0, 0.15);
+  width: 150px;
+}
+
+.social-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 23px;
+    font: 900 13px/1 "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+}
+.social-container .col {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.nav-list li a:before {
+    content: "\f14f";
+    font: 800px 21px/1 "Material Design Icons";
+    color: #4d6de6;
+    display: inline-block;
+    vertical-align: baseline;
+    margin-left: -28px;
+    margin-right: 7px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .22s ease;
+}
+
+
+/* Footer */
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+section {
+    padding: 60px 0;
+}
+
+section .section-title {
+    text-align: center;
+
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+#footer {
+    background: #1E90FF !important;
+}
+#footer h5{
+	padding-left: 10px;
+    border-left: 3px solid #eeeeee;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    color:#ffffff;
+}
+#footer a {
+    color: black;
+    text-decoration: none !important;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+#footer ul.social li{
+	padding: 3px 0;
+}
+#footer ul.social li a i {
+    margin-right: 5px;
+	font-size:25px;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#footer ul.social li:hover a i {
+	font-size:30px;
+	margin-top:-10px;
+}
+#footer ul.social li a,
+#footer ul.quick-links li a{
+	color:#ffffff;
+}
+#footer ul.social li a:hover{
+	color:#eeeeee;
+}
+#footer ul.quick-links li{
+	padding: 3px 0;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#footer ul.quick-links li:hover{
+	padding: 3px 0;
+	margin-left:5px;
+	font-weight:700;
+}
+#footer ul.quick-links li a i{
+	margin-right: 5px;
+}
+#footer ul.quick-links li:hover a i {
+    font-weight: 700;
+}
+@media (max-width:767px){
+	#footer h5 {
+    padding-left: 0;
+    border-left: transparent;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}
+
+
+</style>
+
+	
+</head>
+
+
+<body>
+ 
+  <div class="box">
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-3" style=""><img width="270px" height="150px" src ="cot.gif"></div>
+    <div class="col-sm-6" style=""><img src ="bnr.png"><h3 style="color: blue"></h3> </div>
+    <div class="col-sm-3 flag" style=""></div>
+  </div>
+</div>
+
+
+
+  </div>
+
+
+
+
+<script src="js/script.js"></script>
+</div>
+
+
+
+
+
+  	<div id='cssmenu'>
+<ul>
+   <li class='active'><a href='index.html'><span>Home</span></a></li>
+    <li><a href='#'><span>Registration</span></a></li>
+     <li class='has-sub'><a href='#'><span>Latest News</span></a>
+      <ul>
+         <li class='has-sub'><a href='Unestablished.html'><span><font color="black">venue</font></span></a> 
+         </li>
+      </ul>
+   </li>
+   <li class='last'><a href='hotels.html'><span>Book Hotel</span></a></li>
+   <li><a href='About Us.html'><span>About Us</span></a></li>
+   <li class='last'><a href='Contact Us.html'><span>Contact Us</span></a></li>
+</ul>
+</div>
+<div class="container">
+	<p align="center"> <img src ="mill.jpg"></p>
+ </div>
+<div class="container">
+ <p><h3 align="center"><b style="color: black">Touch images below</b></h3></p>
+</div>
+
+ <section>
+<div class="btn-group" style="width:100%">
+  <button style="width:25%"><div class="container banner_wr">
+            <ul class="banner">
+              <li>
+              	<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <img src="vis.jpg" alt="visa1" style="width:300px;height:200px">
+    </div>
+    <div class="flip-box-back">
+     <h3>Immigration and Visas</h3>
+     <p><a href="https://www.ivisa.com/zimbabwe-visa">Apply Visa.</a></p>
+   
+    </div>
+  </div></button>
+  <button style="width:25%"><div class="container banner_wr">
+            <ul class="banner">
+              <li>
+              	<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <img src="about.jpg" alt="visa" style="width:300px;height:200px">
+    </div>
+    <div class="flip-box-back">
+     <h3>About Confrence</h3>
+     <p>FAO Conference aims to..........</p>
+     <p><a href="url">Read More.</a></p>
+      
+    </div>
+  </div></button>
+  <button style="width:25%"><div class="container banner_wr">
+            <ul class="banner">
+              <li>
+              	<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <img src="nil.jpg" class="rounded" alt="registration" style="width:300px;height:200px">
+<p></p>
+    </div>
+    <div class="flip-box-back">
+     <h3>Conference Registration</h3>
+     <p>Be a part of the conference.</p>
+     <p><a href="url">REGISTER NOW.</a></p>
+      
+    </div>
+  </div></button>
+  <button style="width:25%"><div class="container banner_wr">
+            <ul class="banner">
+              <li>
+              	<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+   
+      <img src="hotel.jpg" alt="visa" style="width:300px;height:200px" align="left">
+
+    </div>
+    <div class="flip-box-back">
+     <h3>Book Hotel</h3>
+     <p><a href="https://www.therainbowtowers.com/contact-us.html">Rainbow Towers.</a></p>
+      <p><a href="https://www.booking.com/hotel/zw/holiday-inn-harare.html">Holliday Inn.</a></p>
+      <p><a href="http://www.meikles.com/">Miekles.</p>
+    </div></button>
+   <button style="width:25%">visa</button>
+    <button style="width:25%">about us</button>
+     <button style="width:25%">registration</button>
+      <button style="width:25%">hotels</button>
+</div>
+        
+          
+
+</section>
+
+
+
+
+
+
+
+
+<button class="open-button" onclick="openForm()"><b><h3>Chat With Us</h3></b> </button>
+
+<div class="chat-popup" id="myForm">
+  <form action="chat.php" class="form-container" method="post">
+
+    <label for="msg"><b>Chat With Us</b></label>
+    <textarea placeholder="Type your message.." name="message" required></textarea>
+
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+    document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+
+<br><br>
+
+
+
+<!--Footer -->
+<section id="footer">
+<footer>
+<center>
+          <div class="container">
+            <div class="row">
+              <div class="grid_4">
+                  <div class="region region-logout-header">
+    <div id="block-block-9" class="block block-block">
+
+
+  <div class="content">
+    <!--smart_paging_autop_filter--><h4>Quick Links</h4><ul class="marked-list"><li><a href="http://www.zim.gov.zw/" target="_blank">Zimbawe Government Portal </a></li><li><a href="http://www.moa.gov.zw/" target="_blank">Ministry of Lands, Agriculture and Rural Settlement</a></li><li><a href="http://www.fao.org/home/en/" target="_blank">Food and Agriculture Organisation of the United Nations</a></li><li><a href="http://www.rbz.co.zw/" target="_blank">Reserve Bank of Zimbabwe</a></li><li><a href="www.tourism.gov.zw" target="_blank">Ministry of Environment, Tourism and Hospitality Industry</a></li><li><a href="http://www.zimtrade.co.zw" target="_blank"></a></li><li><a href="#" target="_blank"></a></li><li><a href="http://www.herald.co.zw/" target="_blank"></a></li><li><a href="emergency"></a></li><li><a href="http://www.sadc.int/" target="_blank"></a></li><li><a href="http://www.comesaria.org/" target="_blank"></a></li></ul>  </div>
+</div>
+<div id="block-block-23" class="block block-block">
+
+
+  <div class="content">
+    <!--smart_paging_autop_filter--><p style="text-align: left;"> </p>  </div>
+</div>
+  </div>
+
+               </div>
+              <div class="grid_4"><h4>National Anthem</h4><br>
+                  <div class="region region-na">
+    <div id="block-views-the-national-anthem-block" class="block block-views">
+
+
+  <div class="content">
+    <div class="view view-the-national-anthem view-id-the_national_anthem view-display-id-block view-dom-id-3cb929f51db1a576a358fee88af3b454">
+
+
+
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+
+  <div class="views-field views-field-field-audio-file">        <div class="field-content"><audio controls="controls"><source src="http://www.zim.gov.zw/sites/default/files/audiofiles/Zimbabwe%20National%20Anthem.mp3" type="audio/mpeg" /></audio></div>  </div>  </div>
+    </div>
+
+
+
+
+
+
+</div>  </div>
+</div>
+  </div>
+<br>
+                 <a href="national-anthem">read more...</a>
+                 
+
+          <div class="region region-poll">
+    <div id="block-views-poll-block" class="block block-views">
+
+
+  <div class="content">
+    <div class="view view-poll view-id-poll view-display-id-block view-dom-id-8aa2facd6fda7c51c55c08c79ba7f45b">
+
+
+
+      <div class="view-content">
+      <table class="views-view-grid cols-1">
+
+  <tbody>
+          <tr class="row-1 row-first row-last">
+                  <td class="col-1 col-first">
+            <div id="node-252" class="node node-poll clearfix" about="/what-do-you-feel-about-website" typeof="sioc:Post sioct:Poll">
+
+
+
+  <div class="content">
+    <div class="poll">
+
+
+
+
+
+</div>
+          </td>
+              </tr>
+      </tbody>
+</table>
+    </div>
+
+
+
+
+
+
+</div>  </div>
+</div>
+  </div>
+              </div>
+              <div class="grid_4">
+                  <div class="region region-logout-header">
+    <div id="block-block-9" class="block block-block">
+
+
+  <div class="content">
+    <!--smart_paging_autop_filter--><h4>Public Holidays</h4> <h5><a href="#">View all 2020 Zimbabwean Public Holidays</a></h5> </div>
+</div>
+<div id="block-block-23" class="block block-block">
+
+
+  <div class="content">
+    <!--smart_paging_autop_filter--><p style="text-align: left;"> </p>  </div>
+</div>
+  </div>
+
+               </div>
+              <div class="grid_4">
+                  <div class="region region-zimbabwe">
+    <div id="block-block-14" class="block block-block">
+
+
+  <div class="content">
+    <!--smart_paging_autop_filter--><h4>About Zimbabwe</h4><ul class="marked-list"><li><a href="history-zimbabwe" target="_blank">History</a></li><li><a href="facts" target="_self">Facts and Figures</a></li><li><a href="zimbabwe-map" target="_blank">Map</a></li><li><a href="parastatals" target="_self">Parastatals</a></li></ul>  </div>
+</div>
+  </div>
+                 
+              </div>
+            </div>
+
+            <div class="copyright">Government of Zimbabwe &copy; <span id="copyright-year"></span>.&nbsp;&nbsp;<a href="#">Privacy Policy</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="sitemap.xml">Site Map</a>
+            </div>
+          </div>
+      </center></footer>
+    </section><!-- /#page, /#page-wrapper -->
+ 
+
+</body>
+</html>
